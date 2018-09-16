@@ -1,5 +1,5 @@
 from unittest import TestCase
-from SQL import Symbol_SQL
+from Classes.SQL import Symbol_SQL
 
 
 class TestSymbol_SQL(TestCase):

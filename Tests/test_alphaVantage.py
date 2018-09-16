@@ -1,6 +1,6 @@
 from unittest import TestCase
-from online_data_sources import AlphaVantage
-from SQL import Symbol_SQL
+from Classes.online_data_sources import AlphaVantage
+from Classes.SQL import Symbol_SQL
 
 class TestAlphaVantage(TestCase):
     def setUp(self):

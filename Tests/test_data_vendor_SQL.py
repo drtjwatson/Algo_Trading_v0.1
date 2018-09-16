@@ -1,5 +1,5 @@
 from unittest import TestCase
-from SQL import Data_vendor_SQL
+from Classes.SQL import Data_vendor_SQL
 
 
 class TestData_vendor_SQL(TestCase):

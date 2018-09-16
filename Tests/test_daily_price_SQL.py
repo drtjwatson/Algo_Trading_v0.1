@@ -1,6 +1,6 @@
 from unittest import TestCase
-from SQL import Daily_price_SQL, Symbol_SQL
-from online_data_sources import AlphaVantage
+from Classes.SQL import Daily_price_SQL, Symbol_SQL
+from Classes.online_data_sources import AlphaVantage
 
 class TestDaily_price_SQL(TestCase):
     def setUp(self):

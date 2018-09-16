@@ -1,8 +1,8 @@
 import datetime
 import time
 from alpha_vantage.timeseries import TimeSeries
-from SQL import Data_vendor_SQL
-from SQL import Symbol_SQL, Daily_price_SQL
+from Classes.SQL import Data_vendor_SQL
+from Classes.SQL import Symbol_SQL, Daily_price_SQL
 
 class AlphaVantage(Data_vendor_SQL):
     def __init__(self):
