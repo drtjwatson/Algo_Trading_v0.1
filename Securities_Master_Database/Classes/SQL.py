@@ -80,12 +80,21 @@ class SQL_connection():
         return output
 
     # @data from list of dicts [{name:value,..}] where name is a column name in table
-    def insertData(self,data):
+    def insertData(self,data,table_name):
         for d in data:
             keys = list(d.keys())
             values = tuple(d.values())
             column_str = ", ".join(keys)
-            self.insertIgnoreIntoTable(self.table_name,column_str,values)
+            self.insertIgnoreIntoTable(table_name,column_str,values)
+
+    def tableColumnNames(self,table_name):
+        final_str = "DESCRIBE %s" % table_name
+        cur = self.cnx.cursor()
+        cur.execute(final_str)
+        data = cur.fetchall()
+        names = [d[0] for d in data]
+        return names
+
 
 # sub class symbol_SQL for access of symbols table in database
 class Symbol_SQL(SQL_connection):
@@ -101,11 +110,15 @@ class Symbol_SQL(SQL_connection):
         return symbols
 
     def symbolID(self,ticker):
-        data = self.selectFromTable(self.table_name, 'id', "ticker='%s'" % ticker)
+        data = self.selectFromTable(self.table_name, 'id, ticker', "ticker='%s'" % ticker)
         return data[0]
 
     def sqlEntry(self,ticker):
         data = self.selectFromTable(self.table_name,'*',"ticker='%s'" % ticker)
+        return data[0]
+
+    def symbolTicker(self,id):
+        data = self.selectFromTable(self.table_name, 'id, ticker', "id='%s'" % id)
         return data[0]
 
 # sub class exchange_SQL for access of exchange table in database
@@ -119,6 +132,11 @@ class Exchange_SQL(SQL_connection):
     def exchangeID(self,exchange_abbrev):
         data = self.selectFromTable(self.table_name,'id',"abbrev='%s'" % exchange_abbrev)
         return data[0]
+
+    def exchangeAbbrev(self,id):
+        data = self.selectFromTable(self.table_name, 'id, abbrev', "id='%s'" % id)
+        return data[0]
+
 
 # sub class data_vendor_SQL for access of data_vendors table in database
 class Data_vendor_SQL(SQL_connection):

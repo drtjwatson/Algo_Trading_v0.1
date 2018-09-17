@@ -1,8 +1,8 @@
 import lxml.html
 import datetime
 import requests
-from Classes.SQL import Symbol_SQL
-from Classes.SQL import Exchange_SQL
+from Securities_Master_Database.Classes.SQL import Symbol_SQL
+from Securities_Master_Database.Classes.SQL import Exchange_SQL
 
 class wiki_exchange(Exchange_SQL):
     def __init__(self):
