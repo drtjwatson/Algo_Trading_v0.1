@@ -1,5 +1,5 @@
 from unittest import TestCase
-from Classes.SQL import Symbol_SQL
+from Securities_Master_Database.Classes.SQL import Symbol_SQL
 
 
 class TestSymbol_SQL(TestCase):
@@ -17,3 +17,12 @@ class TestSymbol_SQL(TestCase):
         ticker = 'MMM'
         data = self.symSQL.symbolID(ticker)
         self.assertEqual(1,data['id'])
+
+    def test_columnNames(self):
+        data = self.symSQL.tableColumnNames()
+        self.assertEqual('id',data[0])
+
+    def test_getSymbol(self):
+        data = self.symSQL.symbolID('MMM')
+        self.assertEqual(data['id'],1)
+        self.assertEqual(data['ticker'],'MMM')

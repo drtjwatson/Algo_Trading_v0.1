@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/SecuritiesMasterDatabase.iml" filepath="$PROJECT_DIR$/.idea/SecuritiesMasterDatabase.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/Algo_Trading_v0.1.iml" filepath="$PROJECT_DIR$/.idea/Algo_Trading_v0.1.iml" />
     </modules>
   </component>
 </project>
