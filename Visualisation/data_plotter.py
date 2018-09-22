@@ -1,5 +1,4 @@
 from Securities_Master_Database.Classes.SQL import Daily_price_SQL, Symbol_SQL
-import pandas as pd
 import matplotlib.pyplot as plt
 import datetime
 
