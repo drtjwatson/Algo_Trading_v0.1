@@ -1,4 +1,4 @@
-from Securities_Master_Database.Classes.SQL import Daily_price_SQL
+from Securities_Master_Database.Classes.SQL import Daily_price_SQL, Symbol_SQL
 import pandas as pd
 import matplotlib.pyplot as plt
 import datetime
@@ -11,7 +11,9 @@ def plotAdjClosePrice(tickers,vendor_id,price_from):
     plt.show()
 
 # main
-ticker = ['MMM','AAPL','GOOGL']
+tickers = Symbol_SQL().getTickers()
+tickers = tickers['ticker'].iloc[0]
+
 vendor_id = 1
 price_from = datetime.datetime.strptime("01/01/2010","%d/%m/%Y")
-plotAdjClosePrice(ticker,vendor_id,price_from)
+plotAdjClosePrice(tickers,vendor_id,price_from)

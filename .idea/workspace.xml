@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1d1efed4-0070-4141-afec-46241a2f6c52" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Visualisation/data_plotter.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Securities_Master_Database/Classes/SQL.py" beforeDir="false" afterPath="$PROJECT_DIR$/Securities_Master_Database/Classes/SQL.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Securities_Master_Database/Tests/test_SQL_connection.py" beforeDir="false" afterPath="$PROJECT_DIR$/Securities_Master_Database/Tests/test_SQL_connection.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Securities_Master_Database/Tests/test_daily_price_SQL.py" beforeDir="false" afterPath="$PROJECT_DIR$/Securities_Master_Database/Tests/test_daily_price_SQL.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Visualisation/data_plotter.py" beforeDir="false" afterPath="$PROJECT_DIR$/Visualisation/data_plotter.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -69,12 +67,12 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="4815" />
+          <entry key="py" value="5236" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="4815" />
+          <entry key="Python" value="5236" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages" />
@@ -82,17 +80,17 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Securities_Master_Database/Classes/SQL.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="225" column="40" selection-start-line="225" selection-start-column="40" selection-end-line="225" selection-end-column="40" />
+            <state relative-caret-position="347">
+              <caret line="222" selection-start-line="222" selection-end-line="222" />
               <folding>
                 <element signature="e#0#22#0" expanded="true" />
-                <element signature="e#3923#4771#0" />
+                <element signature="e#160#4975#0" />
                 <element signature="e#4878#5458#0" />
                 <element signature="e#5404#6617#0" />
-                <marker date="1537633887360" expanded="true" signature="3357:4461" ph="..." />
+                <marker date="1537635824881" expanded="true" signature="3357:4461" ph="..." />
               </folding>
             </state>
           </provider>
@@ -110,13 +108,13 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Visualisation/data_plotter.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="46" lean-forward="true" selection-start-line="16" selection-start-column="46" selection-end-line="16" selection-end-column="46" />
+            <state relative-caret-position="136">
+              <caret line="8" column="13" lean-forward="true" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
               <folding>
-                <element signature="e#0#66#0" expanded="true" />
+                <element signature="e#0#78#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -125,7 +123,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Securities_Master_Database/Tests/test_symbol_SQL.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
+            <state relative-caret-position="269">
               <caret line="20" column="31" lean-forward="true" selection-start-line="20" selection-start-column="31" selection-end-line="20" selection-end-column="31" />
               <folding>
                 <element signature="e#0#29#0" expanded="true" />
@@ -197,8 +195,8 @@
         <option value="$PROJECT_DIR$/Securities_Master_Database/Tests/test_symbol_SQL.py" />
         <option value="$PROJECT_DIR$/Securities_Master_Database/Tests/test_SQL_connection.py" />
         <option value="$PROJECT_DIR$/Securities_Master_Database/Tests/test_daily_price_SQL.py" />
-        <option value="$PROJECT_DIR$/Visualisation/data_plotter.py" />
         <option value="$PROJECT_DIR$/Securities_Master_Database/Classes/SQL.py" />
+        <option value="$PROJECT_DIR$/Visualisation/data_plotter.py" />
       </list>
     </option>
   </component>
@@ -286,6 +284,27 @@
     </option>
   </component>
   <component name="RunManager" selected="Python.data_plotter">
+    <configuration name="SQL" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Algo_Trading_v0.1" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Securities_Master_Database/Classes" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Securities_Master_Database/Classes/SQL.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="data_plotter" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Algo_Trading_v0.1" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -349,34 +368,20 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Unittests for test_symbol_SQL.TestSymbol_SQL.test_getSymbol" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
-      <module name="Algo_Trading_v0.1" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Securities_Master_Database/Tests" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_symbol_SQL.TestSymbol_SQL.test_getSymbol&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
     <list>
-      <item itemvalue="Python tests.Unittests for test_symbol_SQL.TestSymbol_SQL.test_getSymbol" />
       <item itemvalue="Python tests.Unittests for test_daily_price_SQL.TestDaily_price_SQL.test_getData" />
       <item itemvalue="Python tests.Unittests for test_SQL_connection.TestSQL_connection.test_getData" />
       <item itemvalue="Python tests.Unittests for test_daily_price_SQL.TestDaily_price_SQL.test_getAdjClosePrice" />
       <item itemvalue="Python.data_plotter" />
+      <item itemvalue="Python.SQL" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python.data_plotter" />
+        <item itemvalue="Python.SQL" />
         <item itemvalue="Python tests.Unittests for test_daily_price_SQL.TestDaily_price_SQL.test_getAdjClosePrice" />
         <item itemvalue="Python tests.Unittests for test_SQL_connection.TestSQL_connection.test_getData" />
         <item itemvalue="Python tests.Unittests for test_daily_price_SQL.TestDaily_price_SQL.test_getData" />
-        <item itemvalue="Python tests.Unittests for test_symbol_SQL.TestSymbol_SQL.test_getSymbol" />
       </list>
     </recent_temporary>
   </component>
@@ -419,7 +424,14 @@
       <option name="project" value="LOCAL" />
       <updated>1537208590860</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Moved classes">
+      <created>1537633920929</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1537633920932</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -632,16 +644,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Securities_Master_Database/Tests/test_symbol_SQL.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="20" column="31" lean-forward="true" selection-start-line="20" selection-start-column="31" selection-end-line="20" selection-end-column="31" />
-          <folding>
-            <element signature="e#0#29#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Events/Classes/event.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="842">
@@ -659,6 +661,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Securities_Master_Database/Tests/test_symbol_SQL.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="269">
+          <caret line="20" column="31" lean-forward="true" selection-start-line="20" selection-start-column="31" selection-end-line="20" selection-end-column="31" />
+          <folding>
+            <element signature="e#0#29#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Securities_Master_Database/Tests/test_daily_price_SQL.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="371">
@@ -669,26 +681,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Visualisation/data_plotter.py">
+    <entry file="file://$PROJECT_DIR$/Securities_Master_Database/Classes/SQL.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="46" lean-forward="true" selection-start-line="16" selection-start-column="46" selection-end-line="16" selection-end-column="46" />
+        <state relative-caret-position="347">
+          <caret line="222" selection-start-line="222" selection-end-line="222" />
           <folding>
-            <element signature="e#0#66#0" expanded="true" />
+            <element signature="e#0#22#0" expanded="true" />
+            <element signature="e#160#4975#0" />
+            <element signature="e#4878#5458#0" />
+            <element signature="e#5404#6617#0" />
+            <marker date="1537635824881" expanded="true" signature="3357:4461" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Securities_Master_Database/Classes/SQL.py">
+    <entry file="file://$PROJECT_DIR$/Visualisation/data_plotter.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="225" column="40" selection-start-line="225" selection-start-column="40" selection-end-line="225" selection-end-column="40" />
+        <state relative-caret-position="136">
+          <caret line="8" column="13" lean-forward="true" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
           <folding>
-            <element signature="e#0#22#0" expanded="true" />
-            <element signature="e#3923#4771#0" />
-            <element signature="e#4878#5458#0" />
-            <element signature="e#5404#6617#0" />
-            <marker date="1537633887360" expanded="true" signature="3357:4461" ph="..." />
+            <element signature="e#0#78#0" expanded="true" />
           </folding>
         </state>
       </provider>

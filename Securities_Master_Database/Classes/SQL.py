@@ -132,7 +132,8 @@ class Symbol_SQL(SQL_connection):
     def getTickers(self):
         column_str = "id, ticker"
         symbols = self.selectFromTable(self.table_name, column_str)
-        return symbols
+        symbols_df = pandas.DataFrame(symbols)
+        return symbols_df
 
     def symbolID(self,ticker):
         data = self.selectFromTable(self.table_name, 'id, ticker', "ticker='%s'" % ticker)
@@ -208,7 +209,9 @@ class Daily_price_SQL(SQL_connection):
         return data[0]
 
     def getAdjClosePrice(self,vendor_id,symbol_tickers,price_from = None):
-        df = pandas.DataFrame()
+        if isinstance(symbol_tickers,str):
+            symbol_tickers = [symbol_tickers]
+
         for idx, symbol_ticker in enumerate(symbol_tickers):
             column_str = 'daily_price.price_date, daily_price.adj_close_price'
             if price_from==None:
@@ -219,7 +222,7 @@ class Daily_price_SQL(SQL_connection):
                                   ['data_vendor', 'daily_price.data_vendor_id = data_vendor.id']]
             data = self.getData(self.table_name,column_str,conditional_statement,joined_table_names)
             data = data.set_index('price_date')
-            data = data.rename(index=str,columns={list(data)[0]:symbol_ticker})
+            data = data.rename(columns={list(data)[0]:symbol_ticker})
             if idx==0:
                 df = data
             else:
