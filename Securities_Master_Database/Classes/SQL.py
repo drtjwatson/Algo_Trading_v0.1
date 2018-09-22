@@ -2,6 +2,7 @@ import mysql.connector
 from mysql.connector import errorcode
 from math import ceil
 import datetime
+import pandas
 
 # super class of SQL_connection
 class SQL_connection():
@@ -79,6 +80,31 @@ class SQL_connection():
             output.append({n : d[idx] for idx,n in enumerate(names)})
         return output
 
+    def getData(self,table_name,column_str='*',conditional_statement=None,joined_table_names=None):
+        cur = self.cnx.cursor()
+        if conditional_statement==None:
+            if joined_table_names==None:
+                str = "SELECT %s FROM %s" % (column_str,table_name)
+            else:
+                str = "SELECT %s FROM %s" % (column_str,table_name) + " " + ' '.join(["INNER JOIN %s ON %s" % (name_pair[0],name_pair[1]) for name_pair in joined_table_names])
+        else:
+            if joined_table_names == None:
+                str = "SELECT %s FROM %s WHERE %s" % (column_str,table_name,conditional_statement)
+            else:
+                str = "SELECT %s FROM %s " % (column_str,table_name) + " " + ' '.join(
+                    ["INNER JOIN %s ON %s" % (name_pair[0], name_pair[1]) for name_pair in joined_table_names])
+                str = str + " WHERE %s" % conditional_statement
+        cur.execute(str)
+        data = cur.fetchall()
+        names = cur.column_names
+        cur.close()
+        output = []
+        for d in data:
+            output.append({n: d[idx] for idx, n in enumerate(names)})
+
+        output = pandas.DataFrame(output)
+        return output
+
     # @data from list of dicts [{name:value,..}] where name is a column name in table
     def insertData(self,data,table_name):
         for d in data:
@@ -94,7 +120,6 @@ class SQL_connection():
         data = cur.fetchall()
         names = [d[0] for d in data]
         return names
-
 
 # sub class symbol_SQL for access of symbols table in database
 class Symbol_SQL(SQL_connection):
@@ -136,7 +161,6 @@ class Exchange_SQL(SQL_connection):
     def exchangeAbbrev(self,id):
         data = self.selectFromTable(self.table_name, 'id, abbrev', "id='%s'" % id)
         return data[0]
-
 
 # sub class data_vendor_SQL for access of data_vendors table in database
 class Data_vendor_SQL(SQL_connection):
@@ -182,6 +206,26 @@ class Daily_price_SQL(SQL_connection):
         data = cur.fetchall()[0]
         cur.close()
         return data[0]
+
+    def getAdjClosePrice(self,vendor_id,symbol_tickers,price_from = None):
+        df = pandas.DataFrame()
+        for idx, symbol_ticker in enumerate(symbol_tickers):
+            column_str = 'daily_price.price_date, daily_price.adj_close_price'
+            if price_from==None:
+                conditional_statement = "symbol.ticker = '%s' AND data_vendor.id = %s" % (symbol_ticker,vendor_id)
+            else:
+                conditional_statement = "symbol.ticker = '%s' AND data_vendor.id = %s AND daily_price.price_date > '%s'" % (symbol_ticker, vendor_id,price_from)
+            joined_table_names = [['symbol', 'daily_price.symbol_id = symbol.id'],
+                                  ['data_vendor', 'daily_price.data_vendor_id = data_vendor.id']]
+            data = self.getData(self.table_name,column_str,conditional_statement,joined_table_names)
+            data = data.set_index('price_date')
+            data = data.rename(index=str,columns={list(data)[0]:symbol_ticker})
+            if idx==0:
+                df = data
+            else:
+                df[symbol_ticker] = data
+        return df
+
 
 
 

@@ -25,3 +25,9 @@ class TestDaily_price_SQL(TestCase):
         vendor_id = self.avSQL.vendorID(self.avSQL.name)['id']
         symbol_id = self.symSQL.symbolID(ticker)['id']
         self.assertEqual(1, self.dpSQL.checkExisting(vendor_id, symbol_id))
+
+    def test_getAdjClosePrice(self):
+        ticker = 'MMM'
+        vendor_id = 1
+        data = self.dpSQL.getAdjClosePrice(vendor_id,ticker)
+        print(data.head(10))
