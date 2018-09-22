@@ -12,7 +12,6 @@ class basic_finance_stats:
         data = Daily_price_SQL().getAdjClosePrice(1,ticker,price_from)
         return data
 
-    def movingAverage(self,windowSize):
-        data = self.testData()
-        av = data.rolling(windowSize).mean()
+    def movingAverage(self,dataFrame,windowSize):
+        av = dataFrame.rolling(windowSize).mean()
         return av

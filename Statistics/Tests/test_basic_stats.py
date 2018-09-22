@@ -13,8 +13,9 @@ class TestBasic_stats(TestCase):
     def test_movingAverage(self):
         windowSize = 50
         data = self.fs.testData()
-        av = self.fs.movingAverage(windowSize)
-        data['Moving Average'] = av
+        av = self.fs.movingAverage(data,windowSize)
+        data['%s, window = %s' % (data.columns[0],windowSize)] = av
         data = data.astype(float)
         data.plot()
+        plt.title('Moving Average')
         plt.show()
